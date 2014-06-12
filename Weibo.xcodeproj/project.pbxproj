@@ -19,6 +19,10 @@
 		EC09EC7B1901169300DE1CC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC09EC631901169200DE1CC0 /* UIKit.framework */; };
 		EC09EC831901169300DE1CC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC09EC811901169300DE1CC0 /* InfoPlist.strings */; };
 		EC09EC851901169300DE1CC0 /* WeiboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC09EC841901169300DE1CC0 /* WeiboTests.m */; };
+		EC09EC92190116BE00DE1CC0 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC09EC8F190116BE00DE1CC0 /* libWeiboSDK.a */; };
+		EC09EC93190116BE00DE1CC0 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EC09EC90190116BE00DE1CC0 /* WeiboSDK.bundle */; };
+		EC09EC961901174900DE1CC0 /* ProvideMessageForWeiboViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC09EC951901174900DE1CC0 /* ProvideMessageForWeiboViewController.m */; };
+		EC09EC991901189600DE1CC0 /* SendMessageToWeiboViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC09EC981901189600DE1CC0 /* SendMessageToWeiboViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,13 @@
 		EC09EC801901169300DE1CC0 /* WeiboTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WeiboTests-Info.plist"; sourceTree = "<group>"; };
 		EC09EC821901169300DE1CC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EC09EC841901169300DE1CC0 /* WeiboTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeiboTests.m; sourceTree = "<group>"; };
+		EC09EC8F190116BE00DE1CC0 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
+		EC09EC90190116BE00DE1CC0 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
+		EC09EC91190116BE00DE1CC0 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
+		EC09EC941901174900DE1CC0 /* ProvideMessageForWeiboViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProvideMessageForWeiboViewController.h; sourceTree = "<group>"; };
+		EC09EC951901174900DE1CC0 /* ProvideMessageForWeiboViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProvideMessageForWeiboViewController.m; sourceTree = "<group>"; };
+		EC09EC971901189600DE1CC0 /* SendMessageToWeiboViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendMessageToWeiboViewController.h; sourceTree = "<group>"; };
+		EC09EC981901189600DE1CC0 /* SendMessageToWeiboViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendMessageToWeiboViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +69,7 @@
 				EC09EC621901169200DE1CC0 /* CoreGraphics.framework in Frameworks */,
 				EC09EC641901169200DE1CC0 /* UIKit.framework in Frameworks */,
 				EC09EC601901169200DE1CC0 /* Foundation.framework in Frameworks */,
+				EC09EC92190116BE00DE1CC0 /* libWeiboSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +89,7 @@
 		EC09EC531901169200DE1CC0 = {
 			isa = PBXGroup;
 			children = (
+				EC09EC8E190116BE00DE1CC0 /* libWeiboSDK */,
 				EC09EC651901169200DE1CC0 /* Weibo */,
 				EC09EC7E1901169300DE1CC0 /* WeiboTests */,
 				EC09EC5E1901169200DE1CC0 /* Frameworks */,
@@ -111,6 +124,10 @@
 				EC09EC6F1901169300DE1CC0 /* AppDelegate.m */,
 				EC09EC711901169300DE1CC0 /* Images.xcassets */,
 				EC09EC661901169300DE1CC0 /* Supporting Files */,
+				EC09EC941901174900DE1CC0 /* ProvideMessageForWeiboViewController.h */,
+				EC09EC951901174900DE1CC0 /* ProvideMessageForWeiboViewController.m */,
+				EC09EC971901189600DE1CC0 /* SendMessageToWeiboViewController.h */,
+				EC09EC981901189600DE1CC0 /* SendMessageToWeiboViewController.m */,
 			);
 			path = Weibo;
 			sourceTree = "<group>";
@@ -142,6 +159,16 @@
 				EC09EC811901169300DE1CC0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC09EC8E190116BE00DE1CC0 /* libWeiboSDK */ = {
+			isa = PBXGroup;
+			children = (
+				EC09EC8F190116BE00DE1CC0 /* libWeiboSDK.a */,
+				EC09EC90190116BE00DE1CC0 /* WeiboSDK.bundle */,
+				EC09EC91190116BE00DE1CC0 /* WeiboSDK.h */,
+			);
+			path = libWeiboSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +248,7 @@
 			files = (
 				EC09EC6A1901169300DE1CC0 /* InfoPlist.strings in Resources */,
 				EC09EC721901169300DE1CC0 /* Images.xcassets in Resources */,
+				EC09EC93190116BE00DE1CC0 /* WeiboSDK.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,7 +267,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC09EC991901189600DE1CC0 /* SendMessageToWeiboViewController.m in Sources */,
 				EC09EC701901169300DE1CC0 /* AppDelegate.m in Sources */,
+				EC09EC961901174900DE1CC0 /* ProvideMessageForWeiboViewController.m in Sources */,
 				EC09EC6C1901169300DE1CC0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +392,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Weibo/Weibo-Prefix.pch";
 				INFOPLIST_FILE = "Weibo/Weibo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libWeiboSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -375,6 +409,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Weibo/Weibo-Prefix.pch";
 				INFOPLIST_FILE = "Weibo/Weibo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libWeiboSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
